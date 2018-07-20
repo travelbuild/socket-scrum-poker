@@ -1,0 +1,9 @@
+.teamMember{width:100%;height:5vh;}
+.numbers{width:100%;height:50vh;background:#00b894;}
+ul li{text-align:center;font-size:50px;line-height:80px;color:white;cursor:pointer;list-style:none;width:20%;float:left;height:80px;border:1px solid #eee;margin-left:5px;margin-right:5px;margin-bottom:5px;}
+.result{width:100%;height:30vh;background:#b2bec3;}
+.result ul li{width:10%;margin:5px;}
+.result ul li p{font-size:15px;}
+.teamMember{background-color:#26303c;}
+.teamMember ul li{ list-style:none; font-size:20px; margin:5px;color:#fff;}
+ul{ margin:0px !important;}
