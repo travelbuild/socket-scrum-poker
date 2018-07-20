@@ -31,6 +31,6 @@ $(document).ready(function(){
 
 
     socket.on("appInfo", function(data){ 
-       //  $(".teamMember ul").append("<li>"+ data.username + "</li>"); // aldığımız datayı(mesaj ve nicki) append ile #yazismalar divinin içerisine li olarak ekledik.
+       //  $(".teamMember ul").append("<li>"+ data.username + "</li>"); 
     });
 }); 
