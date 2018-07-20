@@ -1,11 +1,11 @@
 $(document).ready(function(){
     $('#userLoginModal').modal('show');
      var username;
-    var socket = io.connect("http://localhost:3000");
+    var socket = io.connect("http://localhost:8080");
     $("input[type=submit]").on('click', function(){
         username = $("input[type=text]").val();
         if (!username){
-            alert("Bir kullanici adi girmelisiniz.");
+            alert("Write your username");
             return; 
         } else {
             $('#userLoginModal').modal('hide');
