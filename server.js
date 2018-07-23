@@ -11,7 +11,7 @@ app.get('/', function(req, res){
 });
 
 io.on('connection', function(socket){
-  console.log('a user connected');
+  console.log('user connected--connection on');
 });
 
 http.listen(8080, function(){
