@@ -1,5 +1,6 @@
 $(document).ready(function(){
-    $('#userLoginModal').modal('show');
+    var modalContent = $('#userLoginModal');
+    modalContent.modal('show');
      var username;
     var socket = io.connect("http://localhost:8080");
     $("input[type=submit]").on('click', function(){
@@ -8,7 +9,7 @@ $(document).ready(function(){
             alert("Write your username");
             return; 
         } else {
-            $('#userLoginModal').modal('hide');
+            modalContent.modal('hide');
         }
         socket.emit('userLogin',{ 
             'username' : username
@@ -18,7 +19,7 @@ $(document).ready(function(){
     $("li").on('click', function(){
         var selectedNumber = $(this).attr('attr-id');
         socket.emit('makeEstimate',{ 
-            'tahmin' : selectedNumber,
+            'puan' : selectedNumber,
             'username' : username 
         });
         $('.numbers ul li').unbind('click');
@@ -26,7 +27,7 @@ $(document).ready(function(){
     });
 
     socket.on("estimate", function(data){ 
-        $(".result ul").append("<li>"+ data.tahmin + "<p>" +data.username+  "</p></li>"); 
+        $(".result ul").append("<li>"+ data.puan + "<p>" +data.username+  "</p></li>"); 
     });
 
 
